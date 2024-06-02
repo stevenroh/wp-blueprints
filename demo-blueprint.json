@@ -4,7 +4,7 @@
 		"php": "8.0",
 		"wp": "latest"
 	},
-	"landingPage": "/wp-admin/site-editor.php",
+	"landingPage": "/",
 	"login": true,
 	"features": {
 		"networking": true
@@ -16,6 +16,12 @@
 				"blogname": "Meetup WP Sion"
 			}
 		},
+		{
+			"step":"setSiteOptions",
+			"options":{
+				 "WPLANG":"fr_FR"
+			}
+	 	},
 		{
 			"step": "updateUserMeta",
 			"meta": {
@@ -44,10 +50,6 @@
 				"resource": "wordpress.org/themes",
 				"slug": "twentytwentyfour"
 			}
-		},
-		{
-			"step": "wp-cli",
-			"command": "wp post delete 1 2 3 --force"
 		},
 		{
 			"step": "importWxr",
