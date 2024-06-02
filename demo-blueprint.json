@@ -1,66 +1,60 @@
 {
-	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"preferredVersions": {
-		"php": "8.0",
-		"wp": "latest"
-	},
-	"landingPage": "/",
-	"login": true,
-	"features": {
-		"networking": true
-	},
-	"steps": [
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogname": "Meetup WP Sion"
-			}
-		},
-		{
-			"step":"setSiteOptions",
-			"options":{
-				 "WPLANG":"fr_FR"
-			}
-	 	},
-		{
-			"step": "updateUserMeta",
-			"meta": {
-				"admin_color": "modern",
-				"show_welcome_panel": 0
-			},
-			"userId": 1
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "advanced-custom-fields"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "custom-post-type-ui"
-			}
-		},
-		{
-			"step": "installTheme",
-			"themeZipFile": {
-				"resource": "wordpress.org/themes",
-				"slug": "twentytwentyfour"
-			}
-		},
-		{
-			"step": "wp-cli",
-			"command": "wp post delete 1 2 3 --force"
-		},
-		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/stevenroh/wp-meetup-sion-demo/main/demo-content.xml"
-			}
-		}
-	]
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.0",
+    "wp": "latest"
+  },
+  "landingPage": "/",
+  "login": true,
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Meetup WP Sion"
+      }
+    },
+    {
+      "step": "updateUserMeta",
+      "meta": {
+        "admin_color": "modern",
+        "show_welcome_panel": 0
+      },
+      "userId": 1
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "advanced-custom-fields"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "custom-post-type-ui"
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
+      }
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post delete 1 2 3 --force"
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/stevenroh/wp-meetup-sion-demo/main/demo-content.xml"
+      }
+    }
+  ]
 }
