@@ -55,6 +55,13 @@
         "resource": "url",
         "url": "https://raw.githubusercontent.com/stevenroh/wp-meetup-sion-demo/main/demo-content.xml"
       }
-    }
+    },
+		{
+			"step": "setSiteOptions",
+			"options": {
+					"show_on_front": "page",
+					"page_on_front": 8
+			}
+		}
   ]
 }
