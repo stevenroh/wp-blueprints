@@ -1,0 +1,78 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"landingPage": "/",
+	"login": true,
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/languages/plugins"
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/languages/themes"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/languages/fr_FR.mo",
+			"data": {
+				"resource": "url",
+				"caption": "Downloading admin-fr_FR.mo",
+				"url": "https://translate.wordpress.org/projects/wp/dev/fr/default/export-translations?format=mo"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/languages/admin-fr_FR.mo",
+			"data": {
+				"resource": "url",
+				"caption": "Downloading admin-fr_FR.mo",
+				"url": "https://translate.wordpress.org/projects/wp/dev/admin/fr/default/export-translations?format=mo"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"WPLANG": "fr_FR"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Demo WooCommerce"
+			}
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern",
+				"show_welcome_panel": 0
+			},
+			"userId": 1
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			}
+		},
+        {
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			}
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post delete 1 2 3 --force"
+		}
+	]
+}
