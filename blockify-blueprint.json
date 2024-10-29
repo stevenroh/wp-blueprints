@@ -66,7 +66,7 @@
 		{
 			"step": "installPlugin",
 			"pluginData": {
-				"resource": "wordpress.org/themes",
+				"resource": "wordpress.org/plugins",
 				"slug": "forminator"
 			}
 		},
