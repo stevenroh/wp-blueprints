@@ -56,12 +56,19 @@
 			},
 			"userId": 1
 		},
-        {
+		{
 			"step": "installTheme",
-            "themeData": {
-                "resource": "wordpress.org/themes",
-                "slug": "blockify"
-            }
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "blockify"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/themes",
+				"slug": "forminator"
+			}
 		},
 		{
 			"step": "wp-cli",
