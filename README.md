@@ -1,5 +1,5 @@
-# wp-blueprints-experiments 
+# wp-blueprints 
 
-https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/stevenroh/wp-blueprints-experiments/main/demo-blueprint.json
+Sample : https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/stevenroh/wp-blueprints/main/demo-blueprint.json
 
-https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/stevenroh/wp-blueprints-experiments/main/woocommerce-blueprint.json
+WooCommerce : https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/stevenroh/wp-blueprints/main/woocommerce-blueprint.json
